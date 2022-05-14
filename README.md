@@ -1,2 +1,10 @@
 # MS549-DataStructures
-Code for UAT data structures 
+------------------------------
+## Description: 
+    Code for UAT data structures
+
+## Language: 
+    Python
+
+## Most resent Version:
+    Assignment 1
