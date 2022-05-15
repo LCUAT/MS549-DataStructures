@@ -34,11 +34,13 @@ def Time(func, text = "Elapsed Time: ", args=None, color="yellow"):
         else:
             funcRes = func()
         end = timer()
-        printc(text + " "+str(end - start)+"s", color)
+        #printc(text + " "+str(end - start)+"s", color)
+        print(text + " "+str(end - start)+"s")
         return (funcRes,end - start)
     except Exception as e: 
         printc(e, "red")
 
 def processorInfo(interval):
-    printc("Processor Time over " + str(interval) + "s: " + str(psutil.cpu_percent(interval)))
+    #printc("Processor Time over " + str(interval) + "s: " + str(psutil.cpu_percent(interval)))
+    print("Processor Time over " + str(interval) + "s: " + str(psutil.cpu_percent(interval)))
     return psutil.cpu_percent(interval)

@@ -16,7 +16,7 @@ stackVal = [1,3,5,7,9,11,13,15,17,19,21]
 # define peek function for stackValay in python
 def peek():
     if(len(stackVal) == 0):
-        printc("Unable to peek on empty stackValay", "red")
+        print("\tUnable to peek on empty stackValay")
         return -1
     else:
         return stackVal[-1]
@@ -25,12 +25,12 @@ def push(val):
     if(len(stackVal) <= 10):
         return stackVal.append(val)
     else:
-        printc(("stack Full, unable to add value: " + str(val)), "red")
+        print(("\t- Stack Full, unable to add value: " + str(val)))
         return -1
 
 def pop():
     if(len(stackVal) == 0):
-        printc("Unable to pop on an empty stackValay", "red")
+        print("\t-Unable to pop on an empty stack")
     else:
         return stackVal.pop()
 
@@ -39,28 +39,28 @@ def pop():
 def main():
 
     #print the inital stack values
-    printc("Stack Initial values:", "green")
+    print("Stack Initial values:")
     print(stackVal)
 
     #push to full stack
-    printc("\nPushing to full stack:", "green")
+    print("\nPushing to full stack:")
     print(Time(push,"pushing to stack",1)[0])
 
     #Pop an element from the statck and show the emement
-    printc("\nPopping All Elements from stack:", "green")
+    print("\nPopping All Elements from stack:")
     while(len(stackVal) > 0):
         print(Time(stackVal.pop,"Time to Pop:")[0])
 
     #pop on an empty stack
-    printc("\nPopping an empty stack:", "green")
+    print("\nPopping an empty stack:")
     Time(pop,"Time to Pop:")[0]
 
     #push to stack
-    printc("\nPushing to stack:", "green")
+    print("\nPushing to stack:")
     Time(push,"pushing to stack",1)[0]
 
     #Peek at the next element in the stack
-    printc("\nPeeking Elements from stack:", "green")
+    print("\nPeeking Elements from stack:")
     print(Time(peek,"Time to peek:")[0])
 
 #time and call main function
