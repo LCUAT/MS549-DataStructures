@@ -1,0 +1,2 @@
+The dijkstra algorithm always found the best possible path, but also took longer to compute than the astart method. 
+However, the astar method did not always find the best possible path but it was computationally quicker expecially for larger data sets.
